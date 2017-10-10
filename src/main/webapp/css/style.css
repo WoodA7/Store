@@ -1,0 +1,110 @@
+body {
+    background-image: url(../images/rfrd.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#menu {
+    background-color: #bbb;
+    color: black;
+}
+
+#home {
+    padding: 20px 30px;
+}
+
+#menu > .container {
+    padding-left: 0px;
+}
+
+ul {
+    padding: 0px;
+}
+     
+ul > a {
+    border-width: 0px;
+    font-size: 20px;
+    padding: 20px 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    -webkit-transition: all .5s;
+    -mz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+ul > a:hover {
+    background-color: #a5a5a5;
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.body {
+    position: relative;
+    top: -16px;
+    background-color: #d5d5d5;
+    opacity: 0.95;
+}
+
+.category {
+    height: 300px;
+    width: 400px;
+    background-color: #d5d5d5;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px black;
+    border-radius: 0px;
+    -webkit-transition: all .2s, background-color .5s;
+    -mz-transition: all .2s, background-color .5s;
+    -o-transition: all .2s, background-color .5s;
+    transition: all .2s, background-color .5s;
+}
+
+.category h4 {
+    position: relative;
+    top: 20%;
+    text-indent: 10px;
+    height: 35%;
+}
+
+.category:hover {
+    background-color: #bbb;
+    box-shadow: 2.5px 2.5px 3.5px black;
+    border-radius: 2px;
+    transform: translate(-2.5px, -2.5px);
+}
+
+.category p {
+    margin: 4px 10px 0px 10px;
+    font-weight: 600;
+    height: 45%;
+}
+
+.next-ref {
+    position: relative;
+    right: 20px;
+    bottom: -10px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    float: right;
+    background-color: #a8a8a8;
+    border-radius: 5px;
+    padding: 3px 30px;
+    -webkit-transition: all .5s;
+    -mz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.next-ref:hover {
+    background-color: black;
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+}
