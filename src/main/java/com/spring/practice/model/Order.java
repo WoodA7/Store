@@ -2,9 +2,6 @@ package com.spring.practice.model;
 
 import java.time.LocalDateTime;
 
-/**
- * Created by Sit on 03.10.2017.
- */
 public class Order {
     private int id;
     private LocalDateTime date;

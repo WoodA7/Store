@@ -1,8 +1,5 @@
 package com.spring.practice.model;
 
-/**
- * Created by Sit on 03.10.2017.
- */
 public class OrderDetails {
     private int id;
     private Item item;

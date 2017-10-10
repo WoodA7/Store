@@ -1,8 +1,6 @@
 package com.spring.practice.model;
 
-/**
- * Created by Sit on 03.10.2017.
- */
+
 public class Category {
 
     private int id;
