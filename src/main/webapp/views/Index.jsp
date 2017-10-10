@@ -16,30 +16,17 @@
 <div id="menu">
     <div class="container">
         <ul>
+
             <a id="home" href="/index">
                 <li>Home</li>
             </a>
-            <a href="#">
-                <li>Холодильники</li>
-            </a>
-            <a href="#">
-                <li>Стиралки</li>
-            </a>
-            <a href="#">
-                <li>Пылесосы</li>
-            </a>
-            <a href="#">
-                <li>Микроволновки</li>
-            </a>
-            <a href="#">
-                <li>Утюги</li>
-            </a>
-            <a href="#">
-                <li>Пароварки</li>
-            </a>
-            <a href="#">
-                <li>Чайники</li>
-            </a>
+
+            <c:forEach var="item" items="${categoryList}">
+                <a href="#">
+                    <li>${item.name}</li>
+                </a>
+            </c:forEach>
+
         </ul>
     </div>
 </div>
