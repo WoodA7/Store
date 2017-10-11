@@ -26,13 +26,14 @@ public class CategoryRepositoryImpl extends Database implements CategoryReposito
 
             Statement st = conn.createStatement();
 
-            String query = "SELECT id, name FROM Category";
+            String query = "SELECT \"Id\", \"Name\", \"Description\"  FROM \"Category\"";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
                 Category category = new Category();
-                category.setId(rs.getInt("id"));
-                category.setName(rs.getString("name"));
+                category.setId(rs.getInt("Id"));
+                category.setName(rs.getString("Name"));
+                category.setDescription(rs.getString("Description"));
                 list.add(category);
             }
 

@@ -8,7 +8,7 @@ import java.sql.SQLException;
  * Created by Sit on 10.10.2017.
  */
 public abstract class Database {
-    private static final String JDBC_DRIVER = "org.postgres.Driver";
+    private static final String JDBC_DRIVER = "org.postgresql.Driver";
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/Store";
     private static final String USER = "postgres";
     private static final String PASSWORD = "admin";
