@@ -24,4 +24,11 @@ public class IndexController {
         return "index";
     }
 
+    @RequestMapping(value = "/category", method = RequestMethod.GET)
+    public String itemView(String id){
+
+
+
+        return null;
+    }
 }

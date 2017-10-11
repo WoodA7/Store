@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,6 +14,7 @@
     <link href="<c:url value="/res/css/bootstrap.min.css" />" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 <div id="menu">
     <div class="container">
         <ul>
@@ -31,23 +33,22 @@
     </div>
 </div>
 
-<div class="container body">
-
+<div id="cntr" class="container body">
 
     <div class="row">
 
-        <c:forEach var="item" items="${categoryList}">
+        <c:forEach var="category" items="${categoryList}">
 
             <div class="col-md-4 category">
-                <h4>${item.name}</h4>
-                <p>${item.description}</p>
-                <a class="next-ref" href="#">Далее</a>
+                <h4>${category.name}</h4>
+                <p>${category.description}</p>
+                <input type="button" onclick="displayItems(${category.id})"
+                       class="next-ref" value="Далее" />
             </div>
 
         </c:forEach>
 
     </div>
-
 
 </div>
 
@@ -62,5 +63,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
+<script src="<c:url value="/res/scripts/jquery-3.2.1.min.js" />"></script>
+<script>
+    function displayItems(id) {
+        $.ajax({
+            type: "GET",
+            //url: "/category/"+id,
+            url:"https://www.google.com",
+            data: {},
+            success:function (result) {
+                var container = ${"#cntr"};
+                container.empty();
+                container.text(result);
+            }
+        });
+    }
+</script>
 </body>
 </html>
