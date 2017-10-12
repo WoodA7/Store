@@ -43,7 +43,7 @@
                 <h4>${category.name}</h4>
                 <p>${category.description}</p>
                 <input type="button" onclick="displayItems(${category.id})"
-                       class="next-ref" value="Далее" />
+                       class="next-ref" value="Далее"/>
             </div>
 
         </c:forEach>
@@ -67,12 +67,12 @@
 <script>
     function displayItems(id) {
         $.ajax({
-            type: "GET",
-            //url: "/category/"+id,
-            url:"https://www.google.com",
-            data: {},
-            success:function (result) {
-                var container = ${"#cntr"};
+            type: "POST",
+            url: "/category",
+            data: {id: id},
+            async: true,
+            success: function (result) {
+                var container = $("#cntr");
                 container.empty();
                 container.text(result);
             }

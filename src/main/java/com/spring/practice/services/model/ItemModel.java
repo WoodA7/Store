@@ -1,27 +1,37 @@
-package com.spring.practice.model;
+package com.spring.practice.services.model;
 
-/**
- * Created by Sit on 03.10.2017.
- */
-public class Item {
+import com.spring.practice.model.Category;
+import com.spring.practice.model.ItemDescription;
 
+public class ItemModel {
     private int id;
     private String name;
     private double price;
     private double discount;
     private Category category;
     private ItemDescription itemDescription;
+    private double priceDiscount;
 
-    public Item() {
+    public ItemModel() {
     }
 
-    public Item(int id, String name, double price, double discount, Category category, ItemDescription itemDescription) {
+    public ItemModel(int id, String name, double price, double discount, double priceDiscount, Category category, ItemDescription itemDescription) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.discount = discount;
         this.category = category;
+        this.priceDiscount = priceDiscount;
         this.itemDescription = itemDescription;
+    }
+
+    public void setPriceDiscount(double priceDiscount) {
+        this.priceDiscount = priceDiscount;
+    }
+
+    public double getPriceDiscount() {
+
+        return priceDiscount;
     }
 
     public int getId() {
